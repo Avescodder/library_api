@@ -10,7 +10,9 @@ services:
       POSTGRES_DB: mydb
     volumes:
       - pgdata:/var/lib/postgresql/data
-      
+    ports:
+      - "5432:5432"
+
   web:
     build: ./app
     ports:
